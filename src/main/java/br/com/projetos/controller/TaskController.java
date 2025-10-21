@@ -27,7 +27,7 @@ public class TaskController {
 
     private final TaskService taskService;
 
-    @PostMapping("{projectId}")
+    @PostMapping("/{projectId}")
     @Operation(summary = "endpoint responsible for task registration.")
     @ApiResponse(responseCode = "201", description = " success", content = {
             @Content(mediaType = "application.json", schema = @Schema(implementation = ResponseEntity.class))
